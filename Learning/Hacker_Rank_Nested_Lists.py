@@ -10,7 +10,7 @@ if __name__ == '__main__':
         score_list.append(score)
 mark_sheet.sort()
 score_set = set(score_list)
-sec  = sorted(score_set,reverse=True)[2]
+sec  = sorted(score_set,reverse=False)[1]
 
 for n, m in (mark_sheet):
     if m == sec:
