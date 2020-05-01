@@ -2,11 +2,15 @@
 import re
 import sys
 
-regex_pattern = r"\.\.\.."
+regex_pattern = r"...\."
 
 
 test_string = input()
 
-match = re.findall(regex_pattern, test_string)
+match1 = re.findall(regex_pattern, test_string)
 
-print(match)
+print(match1)
+
+match = re.match(regex_pattern, test_string) is not None
+
+print(str(match).lower())
