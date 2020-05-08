@@ -1,14 +1,10 @@
-def count_substring(string, sub_string):
-    cnt = 0
-    for st in range(len(string)):
-        for sub_st in sub_string:
-            if sub_st == st:
-                continue
-            else:
-                
-                cnt+=1
+def count_substring(string,sub_string):
 
+    return (len([i for i in range(len(string)) if string[i:i+len(sub_string)]==sub_string]))
 
-        if sub_string:
-                cnt+=1
-    return
+if __name__ == '__main__':
+    string = 'ABCDCDC'
+    sub_string = 'CDC'
+
+    count = count_substring(string, sub_string)
+    print(count)
